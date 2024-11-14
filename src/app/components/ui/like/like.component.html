@@ -1,0 +1,14 @@
+@if (role ==="button") {
+<fa-icon
+  (click)="toggleLike()"
+  (keydown.enter)="toggleLike()"
+  [icon]="liked ? faHeart : emptyHeart"
+  [ngClass]="'liked'"
+  tabindex="0"
+  role="button"
+  aria-label="Like button"
+></fa-icon>
+
+} @if(role === 'span'){
+<fa-icon [icon]="faHeart" [ngClass]="'liked'"></fa-icon>
+}

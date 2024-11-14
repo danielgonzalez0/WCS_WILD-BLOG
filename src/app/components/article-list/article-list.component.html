@@ -1,0 +1,22 @@
+<div class="article-wrapper">
+  <div class="a-cover">
+    <img [src]="article.image" [alt]="article.title" />
+    <span class="a-category">{{ article.categoryName }}</span>
+  </div>
+  <div class="a-content-wrapper">
+    <div class="a-c-header">
+      <div class="a-c-header-info">
+        <span>{{ article.createdAt | date : "dd.MM.yyyy" }}</span>
+        <span>{{article.likeCount > 1 ? 'likes: ' : 'like: '}}{{article.likeCount}}</span>
+      </div>
+      <span>
+        <app-like
+          [role]="'button'"
+          (likeChange)="onLikeChange($event)"
+        ></app-like>
+      </span>
+    </div>
+    <h2>{{ article.title }}</h2>
+    <p class="a-c-description">{{ article.content }}</p>
+  </div>
+</div>
