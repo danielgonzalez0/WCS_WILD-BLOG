@@ -1,0 +1,9 @@
+@import "variables";
+
+.app-wrapper {
+  background-color: $light-color;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  padding: 20px 40px;
+  min-height: calc(100vh - 40px);
+}
